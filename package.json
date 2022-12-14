@@ -1,0 +1,12 @@
+{
+    "name": "tech-vpn",
+    "version": "0.0.0",
+    "main": "build/kremlin/index.html",
+    "devDependencies": {
+        "@types/chrome-apps": "^0.0.17",
+        "@types/node": "^18.11.9"
+    },
+    "dependencies": {
+        "sudo-prompt": "^9.2.1"
+    }
+}

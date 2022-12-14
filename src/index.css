@@ -1,0 +1,8 @@
+body, html {
+    height: 100%;
+}
+
+#login-pane {
+    width: 50%;
+    height: 20em;
+}
