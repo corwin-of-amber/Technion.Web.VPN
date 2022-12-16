@@ -1,8 +1,28 @@
-body, html {
+body, html, #ide {
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-#login-pane {
-    width: 50%;
-    height: 20em;
+* {
+    box-sizing: border-box;
+}
+
+#ide {
+    display: flex;
+    flex-direction: row;
+}
+
+#ide > div {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+#ide #login-pane {
+    overflow: hidden;  /* the webview is somehow weird */
+}
+
+#ide #output-pane {
+    padding: 0 9px;
 }
