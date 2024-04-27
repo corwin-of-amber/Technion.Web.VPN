@@ -14,15 +14,21 @@ body, html, #ide {
     flex-direction: row;
 }
 
-#ide > div {
-    flex-basis: 0;
-    flex-grow: 1;
-}
-
 #ide #login-pane {
     overflow: hidden;  /* the webview is somehow weird */
 }
 
 #ide #output-pane {
     padding: 0 9px;
+}
+
+/* split.js stuff */
+#ide .gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+#ide .gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    cursor: col-resize;
 }
