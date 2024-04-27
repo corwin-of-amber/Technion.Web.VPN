@@ -1,0 +1,27 @@
+{
+  "name": "Technion VPN Operative",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "host_permissions": [
+    "*://*.technion.ac.il/",
+    "*://trillian/"
+  ],
+  "permissions": [
+    "cookies",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "description": "A chromium extension to get the VPN token and send it to the agent.",
+  "icons": {
+    "16": "icons/nasapod16x16.png",
+    "32": "icons/nasapod32x32.png",
+    "48": "icons/nasapod48x48.png",
+    "128": "icons/nasapod128x128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
