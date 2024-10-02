@@ -1,5 +1,5 @@
 async function refreshCookie() {
-  let resp = await chrome.runtime.sendMessage({popupOpen: true});
+  let resp = await chrome.runtime.sendMessage({action: 'open'});
   console.log(resp);
   let dsid = undefined;
   for (let cookie of resp) {
@@ -10,4 +10,12 @@ async function refreshCookie() {
     fetch(`http://trillian:2002/?dsid=${dsid}`);
 }
 
-refreshCookie();
+function clearCookies() {
+  chrome.runtime.sendMessage({action: 'clear'});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('#clear').addEventListener('click', clearCookies);
+
+  refreshCookie();
+});
